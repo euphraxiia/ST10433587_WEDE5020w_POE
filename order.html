@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online - Campanella Pizza</title>
+    <meta name="description" content="Order delicious wood-fired pizza online from Campanella Pizza. Quick pickup or delivery service in Meyerton.">
+</head>
+<body>
+
+    <!-- Main navigation menu -->
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="promotions.html">Promotions</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Order page heading -->
+        <section class="order-heading">
+            <h1>Place Your Order</h1>
+        </section>
+
+        <!-- Order form section -->
+        <section class="order-form-section">
+            <form class="order-form">
+                <!-- Customer Information -->
+                <div class="form-group">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="firstName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="lastName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-number">Contact Number:</label>
+                    <input type="tel" id="contact-number" name="contactNumber" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+
+                <!-- Delivery Time -->
+                <div class="form-group">
+                    <label for="delivery-time">Preferred Delivery Time:</label>
+                    <select id="delivery-time" name="deliveryTime" required>
+                        <option value="">Select preferred time</option>
+                        <option value="asap">As Soon As Possible</option>
+                        <option value="30min">In 30 minutes</option>
+                        <option value="1hour">In 1 hour</option>
+                        <option value="1.5hours">In 1.5 hours</option>
+                        <option value="2hours">In 2 hours</option>
+                    </select>
+                </div>
+
+                <!-- Pizza Size -->
+                <div class="form-group">
+                    <label for="pizza-size">Pizza Size:</label>
+                    <select id="pizza-size" name="pizzaSize" required>
+                        <option value="">Select pizza size</option>
+                        <option value="small">Small (8 inch)</option>
+                        <option value="medium">Medium (10 inch)</option>
+                        <option value="large">Large (12 inch)</option>
+                        <option value="family">Family (14 inch)</option>
+                    </select>
+                </div>
+
+                <!-- Pizza Flavour -->
+                <div class="form-group">
+                    <label for="pizza-flavour">Pizza Flavour:</label>
+                    <select id="pizza-flavour" name="pizzaFlavour" required>
+                        <option value="">Select pizza flavour</option>
+                        <option value="carnivore-feast">Carnivore's Feast</option>
+                        <option value="meat-supreme">Meat Supreme</option>
+                        <option value="pepperoni-special">Pepperoni Special</option>
+                        <option value="smokey-chicken">Smokey Chicken Delight</option>
+                        <option value="chicken-mushroom">Chicken & Mushroom</option>
+                        <option value="classic-margherita">Classic Margherita</option>
+                        <option value="mediterranean">Mediterranean Delight</option>
+                        <option value="veggie-supreme">Veggie Supreme</option>
+                    </select>
+                </div>
+
+                <!-- Toppings -->
+                <div class="form-group">
+                    <label for="toppings">Additional Toppings (Optional):</label>
+                    <textarea id="toppings" name="toppings" rows="2" placeholder="Extra cheese, mushrooms, pepperoni, etc."></textarea>
+                </div>
+
+                <!-- Payment Information -->
+                <div class="form-group">
+                    <label for="card-number">Credit Card Number:</label>
+                    <input type="text" id="card-number" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cvv">CVV Number:</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4" required>
+                </div>
+
+                <!-- Additional Notes -->
+                <div class="form-group">
+                    <label for="additional-notes">Additional Notes:</label>
+                    <textarea id="additional-notes" name="additionalNotes" rows="3" placeholder="Special instructions, allergies, gate codes, etc."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="submit-order-btn">Submit Order</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Campanella Pizza. All Rights Reserved.</p>
+    </footer>
+    
+</body>
+</html>

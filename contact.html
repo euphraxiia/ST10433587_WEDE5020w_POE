@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Campanella Pizza</title>
+    <meta name="description" content="Contact Campanella Pizza in Meyerton. Find our location, opening hours, phone number, and send us a message.">
+</head>
+<body>
+    <!-- Main navigation menu -->
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="promotions.html">Promotions</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Contact us page heading -->
+        <section class="contact-heading">
+            <h1>Contact Us</h1>
+        </section>
+
+        <!-- Contact form & map section -->
+        <section class="contact-content">
+            <div class="contact-layout">
+                
+                <!-- Contact form on the left -->
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Name and Surname:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Please select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="compliment">Compliment</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Please tell us how we can help you..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+
+                    <!-- Contact information -->
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p><strong>Phone:</strong> 016 362 2502</p>
+                        <p><strong>Email:</strong> campanellapizzameyerton@outlook.co.za</p>
+                    </div>
+                </div>
+                
+                <!-- Map and address on the right -->
+                <div class="location-section">
+                    <!-- Google Maps embed -->
+                    <div class="location-map">
+                        <h2>Find Us</h2>
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.2742739945937!2d27.9041!3d-26.4793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a1c5c5c5c5c5%3A0x5c5c5c5c5c5c5c5c!2s19%20Loch%20Street%2C%20Meyerton!5e0!3m2!1sen!2sza!4v1627834567890!5m2!1sen!2sza"
+                                width="100%" 
+                                height="300" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Campanella Pizza Location">
+                            </iframe>
+                        </div>
+                    </div>
+                    
+                    <!-- Pizza place address -->
+                    <div class="restaurant-address">
+                        <h3>Our Address</h3>
+                        <p>19 Loch Street<br>
+                        Meyerton, Gauteng<br>
+                        South Africa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Campanella Pizza. All rights reserved.</p>
+    </footer>
+ 
+</body>
+</html>
