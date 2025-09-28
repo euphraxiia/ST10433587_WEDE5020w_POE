@@ -165,7 +165,6 @@ This phase focused on transforming the HTML foundation into a visually appealing
 - Added more descriptive alt text for images
 - Refined content organisation and readability
 - Added a sitemap
-- Made changes to 
 
 ## References
 
