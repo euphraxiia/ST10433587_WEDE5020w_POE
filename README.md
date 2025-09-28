@@ -79,7 +79,7 @@ The website comprises six main sections, each serving specific user needs:
 
 ## Technical Implementation
 
-The website utilises modern web technologies, including HTML5 for semantic structure, CSS for visual styling and responsive design, and JavaScript for interactive functionality. The responsive framework ensures compatibility across all devices and screen sizes.
+Through the use of GitHub and VS Code, the website utilises modern web technologies, including HTML5 for semantic structure, CSS for visual styling and responsive design, and JavaScript for interactive functionality. The responsive framework ensures compatibility across all devices and screen sizes.
 
 Hosting is provided through Afrihost with the domain www.campanellapizza.co.za, ensuring reliable South African-based service. The technical architecture supports future scalability and maintenance requirements.
 
