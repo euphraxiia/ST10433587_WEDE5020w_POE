@@ -91,11 +91,81 @@ The content strategy emphasises local relevance whilst maintaining professional 
 
 ## Development Timeline
 
-### Phase 1: Foundation (Weeks 1-5)
+### Phase 1: Foundation (Weeks 1 - 5)
 
 **Duration**: 21 July - 25 August 2025
 
 The initial phase focuses on establishing the groundwork for the entire project. During the first week, the team conducts thorough research into the organisation's needs and submits the project proposal whilst setting up the GitHub repository. Week two involves detailed content planning, including finalising the sitemap design and creating wireframes for all pages. The third and fourth weeks concentrate on HTML development, building the structural foundation for all five pages using semantic HTML tags and implementing a functional navigation system. The final week of this phase involves comprehensive testing, validation, and preparation for the first submission deadline on 27 August 2025.
+
+## Phase 2: Visual Design and Responsive Development (Weeks 6 - 9)
+
+**Duration**: 25 August - 26 September 2025
+
+This phase focused on transforming the HTML foundation into a visually appealing and responsive website using CSS styling techniques.
+
+### Week 6: CSS Foundation and Base Styling
+**Dates**: 25 August - 1 September 2025
+- Created external CSS stylesheet (`css/style.css`) and linked to all HTML pages
+- Implemented CSS reset for cross-browser consistency
+- Established base typography using Google Fonts (Playfair Display for headings, Open Sans for body text)
+- Applied colour scheme based on Italian restaurant aesthetic:
+  - Primary: Tomato Red (#C62828)
+  - Secondary: Mozzarella White (#FFF8E1)
+  - Accent: Olive Green (#558B2F)
+  - Text: Charcoal Black (#263238)
+- Set default styling for consistent font family, sizes, and spacing
+
+### Week 7: Advanced CSS and Layout Development
+**Dates**: 1 - 8 September 2025
+- Implemented CSS Grid and Flexbox layouts for structured content presentation
+- Created responsive navigation menu with hover effects
+- Applied visual styling including backgrounds, borders, and shadows
+- Developed pseudo-classes for interactive elements (:hover, :focus, :active states)
+- Styled all page components including headers, main content areas, and footers
+
+### Week 8: Responsive Design Implementation
+**Dates**: 8 - 15 September 2025
+- Implemented media queries for multiple breakpoints:
+  - Desktop: 1200px and above
+  - Tablet: 768px - 1199px
+  - Mobile: 320px - 767px
+- Created responsive navigation menu that adapts on mobile devices
+- Optimised images for different screen sizes and resolutions
+- Adjusted typography scales for readability across devices
+- Modified grid layouts to stack appropriately on smaller screens
+
+### Week 9: Final CSS Refinement and Testing
+**Dates**: 15 - 26 September 2025 (29 September 2025)
+- Conducted cross-browser compatibility testing (Chrome, Firefox, Safari, Edge)
+- Performed responsive design testing across multiple devices and screen sizes
+- Refined spacing, alignments, and visual hierarchy
+- Optimised CSS code for performance and maintainability
+- Validated CSS code and resolved styling conflicts
+- **Part 2 Submission**: 26 September 2025 (submitted on the 29th of September 2025 because of certain circumstances).
+
+### Key Achievements in Phase 2:
+- **Responsive Design**: Website adapts to desktop, tablet, and mobile devices
+- **Visual Identity**: Implemented colour scheme and typography reflecting Italian restaurant branding
+- **Interactive Elements**: Added hover states and focus indicators for user experience
+- **Cross-browser Compatibility**: Ensured consistent appearance across major web browsers
+- **Performance Optimisation**: Created efficient CSS with minimal redundancy
+
+### Technical Specifications:
+- **CSS Framework**: Custom CSS with Grid and Flexbox layouts
+- **Typography**: Google Fonts integration (Playfair Display, Open Sans)
+- **Responsive Breakpoints**: Mobile-first approach with progressive enhancement
+- **Browser Support**: Modern browsers with graceful degradation
+- **Code Organisation**: Modular CSS structure with clear commenting
+
+### Changes Made Based on Part 1 Feedback:
+- Corrected image file naming convention (removed duplicate extension from `owners.jpg.jpg`)
+- Enhanced semantic HTML structure for better accessibility
+- Corrected HTML errors from Part 1
+- Improved navigation consistency across all pages
+- Added more descriptive alt text for images
+- Refined content organisation and readability
+- Added a sitemap
+- Made changes to 
 
 ## References
 
