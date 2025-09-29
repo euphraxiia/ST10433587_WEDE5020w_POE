@@ -53,12 +53,11 @@ p {
 /* header & navigation styling (enhance nav FEEDBACK FROM P1) */
 header {
     background: linear-gradient(135deg, #C62828 0%, #B71C1C 100%);
-    box-shadow: 0 8px 32px rgba(198, 40, 40, 0.4);
+    box-shadow: 0 4px 12px rgba(198, 40, 40, 0.25);
     position: sticky;
     inset-block-start: 0;
     z-index: 1000;
-    padding: 1.5rem 0;
-    backdrop-filter: blur(15px);
+    padding: 1rem 0;
 }
 
 header::before {
@@ -67,7 +66,7 @@ header::before {
     inset-block-start: 0;
     inset-inline-start: 0;
     inset-inline-end: 0;
-    block-size: 2px;
+    block-size: 3px;
     background: linear-gradient(90deg, #558B2F, #C62828, #558B2F);
     opacity: 0.7;
 }
@@ -83,7 +82,7 @@ nav {
     justify-content: center;
     align-items: center;
     list-style: none;
-    gap: 1.5rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
 }
 
@@ -95,112 +94,69 @@ nav {
     color: #FFF8E1;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.05rem;
-    padding: 1rem 2rem;
-    border-radius: 30px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
     position: relative;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.5px;
     display: block;
     background: rgba(255, 248, 225, 0.05);
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     font-family: 'Open Sans', sans-serif;
-}
-
-.nav-menu li a::before {
-    content: '';
-    position: absolute;
-    inset-block-start: 0;
-    inset-inline-start: 0;
-    inline-size: 100%;
-    block-size: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 248, 225, 0.15), transparent);
-    border-radius: 30px;
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: all 0.6s ease;
-}
-
-.nav-menu li a::after {
-    content: '';
-    position: absolute;
-    inset-block-end: -5px;
-    inset-inline-start: 50%;
-    inline-size: 0;
-    block-size: 2px;
-    background: #558B2F;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-    border-radius: 1px;
 }
 
 .nav-menu li a:hover,
 .nav-menu li a:focus {
     background: rgba(255, 248, 225, 0.15);
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-color: rgba(255, 248, 225, 0.3);
     color: #FFFFFF;
 }
 
-.nav-menu li a:hover::before,
-.nav-menu li a:focus::before {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.nav-menu li a:hover::after,
-.nav-menu li a:focus::after {
-    inline-size: 60%;
-}
-
 .nav-menu li a:active {
-    transform: translateY(-1px) scale(1.02);
+    transform: translateY(0);
 }
 
 /* current page indicator */
 .nav-menu li a.active {
-    background: rgba(85, 139, 47, 0.2);
+    background: rgba(85, 139, 47, 0.3);
     border-color: #558B2F;
     color: #FFFFFF;
-}
-
-.nav-menu li a.active::after {
-    inline-size: 80%;
-    background: #FFF8E1;
 }
 
 /* main content container */
 main {
     max-inline-size: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2.5rem 2rem;
     min-block-size: calc(100vh - 200px);
 }
 
 /* homepage styling */
 .welcome-section {
-    background: linear-gradient(145deg, #FFFFFF 0%, #FAFAFA 100%);
-    padding: 3.5rem 2.5rem;
-    border-radius: 18px;
-    box-shadow: 0 12px 40px rgba(38, 50, 56, 0.12);
+    background: linear-gradient(145deg, #FFFFFF 0%, #F9F9F9 100%);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(38, 50, 56, 0.08);
     margin-block-end: 2.5rem;
-    border: 1px solid #E8E8E8;
+    border: 1px solid #ECECEC;
 }
 
 .welcome-heading {
     text-align: center;
-    margin-block-end: 2.5rem;
-    padding: 1.8rem;
-    background: linear-gradient(145deg, #FFFFFF 0%, #F8F8F8 100%);
+    margin-block-end: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(145deg, #FFFFFF 0%, #F5F5F5 100%);
     border-radius: 12px;
-    border: 2px solid #E0E0E0;
-    box-shadow: 0 6px 20px rgba(38, 50, 56, 0.08);
+    border: 1px solid #E5E5E5;
+    box-shadow: 0 3px 10px rgba(38, 50, 56, 0.06);
 }
 
 .welcome-heading h1 {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     background: linear-gradient(135deg, #C62828 0%, #558B2F 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -213,38 +169,37 @@ main {
 .homepage-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
     align-items: center;
-    padding: 2.5rem;
-    background: linear-gradient(145deg, #FFFFFF 0%, #FCFCFC 100%);
-    border-radius: 15px;
-    border: 2px solid #E8E8E8;
-    box-shadow: 0 8px 25px rgba(38, 50, 56, 0.1);
+    padding: 2rem;
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: 1px solid #ECECEC;
+    box-shadow: 0 4px 16px rgba(38, 50, 56, 0.06);
 }
 
 .tagline-section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.8rem;
+    gap: 1.5rem;
 }
 
 .company-name h2 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     color: #C62828;
     margin-block-end: 0;
     font-family: 'Playfair Display', Georgia, serif;
     font-weight: 700;
-    text-shadow: 1px 1px 3px rgba(198, 40, 40, 0.1);
 }
 
 .tagline p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-style: italic;
     color: #558B2F;
     margin-block-end: 0;
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .pizza-hero-image {
@@ -256,15 +211,15 @@ main {
 .pizza-hero-image img {
     max-inline-size: 100%;
     block-size: auto;
-    border-radius: 15px;
-    box-shadow: 0 12px 35px rgba(38, 50, 56, 0.18);
-    transition: transform 0.3s ease;
-    border: 2px solid #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(38, 50, 56, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #F5F5F5;
 }
 
 .pizza-hero-image img:hover {
     transform: scale(1.03);
-    box-shadow: 0 15px 45px rgba(38, 50, 56, 0.22);
+    box-shadow: 0 8px 28px rgba(38, 50, 56, 0.18);
 }
 
 /* button styling */
@@ -272,19 +227,18 @@ main {
     display: inline-block;
     background: linear-gradient(135deg, #C62828 0%, #B71C1C 100%);
     color: #FFF8E1;
-    padding: 1.2rem 2.8rem;
+    padding: 1rem 2.5rem;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 8px;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.35s ease;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    box-shadow: 0 8px 25px rgba(198, 40, 40, 0.4);
+    box-shadow: 0 4px 12px rgba(198, 40, 40, 0.25);
     position: relative;
-    overflow: hidden;
     min-inline-size: 160px;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
@@ -299,15 +253,16 @@ main {
     inset-inline-start: -100%;
     inline-size: 100%;
     block-size: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.6s ease;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: left 0.5s ease;
+    border-radius: 8px;
 }
 
 .order-now-btn:hover,
 .submit-btn:hover,
 .submit-order-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(198, 40, 40, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(198, 40, 40, 0.35);
     background: linear-gradient(135deg, #D32F2F 0%, #C62828 100%);
 }
 
@@ -320,17 +275,17 @@ main {
 .order-now-btn:active,
 .submit-btn:active,
 .submit-order-btn:active {
-    transform: translateY(-1px);
+    transform: translateY(0);
 }
 
 /* promotions section */
 .promotions {
     background: linear-gradient(135deg, #558B2F 0%, #689F38 100%);
     color: #FFF8E1;
-    padding: 3.5rem;
-    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    border-radius: 16px;
     text-align: center;
-    box-shadow: 0 12px 40px rgba(85, 139, 47, 0.35);
+    box-shadow: 0 6px 24px rgba(85, 139, 47, 0.25);
     margin-block-end: 2.5rem;
     position: relative;
 }
@@ -342,40 +297,40 @@ main {
     inset-inline-start: 0;
     inset-inline-end: 0;
     inset-block-end: 0;
-    background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+    background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
     pointer-events: none;
-    border-radius: 20px;
+    border-radius: 16px;
 }
 
 .promotions h2 {
     color: #FFF8E1;
-    font-size: 2.8rem;
-    margin-block-end: 2rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: 2.5rem;
+    margin-block-end: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
     position: relative;
     z-index: 2;
 }
 
 .promo-banner {
-    background: rgba(255, 248, 225, 0.15);
-    padding: 2.5rem 2rem;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 248, 225, 0.2);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 248, 225, 0.12);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 248, 225, 0.2);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
     position: relative;
     z-index: 2;
 }
 
 .promo-banner h3 {
     color: #FFF8E1;
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-block-end: 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 .promo-banner p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-block-end: 0.8rem;
     font-weight: 500;
 }
@@ -394,12 +349,12 @@ main {
 .order-heading,
 .promotions-heading {
     text-align: center;
-    margin-block-end: 3rem;
-    padding: 1.8rem 0;
-    background: linear-gradient(145deg, #FFFFFF 0%, #F8F8F8 100%);
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(38, 50, 56, 0.1);
-    border: 1px solid #E0E0E0;
+    margin-block-end: 2.5rem;
+    padding: 1.5rem 0;
+    background: linear-gradient(145deg, #FFFFFF 0%, #F5F5F5 100%);
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(38, 50, 56, 0.06);
+    border: 1px solid #E5E5E5;
 }
 
 .about-heading h1,
@@ -407,7 +362,7 @@ main {
 .menu-heading h1,
 .order-heading h1,
 .promotions-heading h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin-block-end: 0;
     color: #263238;
 }
@@ -416,12 +371,12 @@ main {
 .our-history,
 .mission-statement,
 .vision-statement {
-    background: linear-gradient(145deg, #FFFFFF 0%, #FAFAFA 100%);
-    padding: 2.2rem;
+    background: linear-gradient(145deg, #FFFFFF 0%, #F9F9F9 100%);
+    padding: 2rem;
     margin-block-end: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(38, 50, 56, 0.1);
-    border-inline-start: 5px solid #C62828;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(38, 50, 56, 0.08);
+    border-inline-start: 4px solid #C62828;
     transition: all 0.3s ease;
     display: inline-block;
     inline-size: 31.5%;
@@ -434,8 +389,8 @@ main {
 .our-history:hover,
 .mission-statement:hover,
 .vision-statement:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 35px rgba(38, 50, 56, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(38, 50, 56, 0.12);
     border-inline-start-color: #558B2F;
 }
 
@@ -475,7 +430,7 @@ main {
 .expand-btn:hover {
     background: #B71C1C;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(183, 28, 28, 0.3);
+    box-shadow: 0 3px 8px rgba(183, 28, 28, 0.25);
 }
 
 /* about business info and team sections containers */
@@ -490,12 +445,12 @@ main {
 
 /* team heading */
 .team-heading {
-    background: linear-gradient(145deg, #FFFFFF 0%, #F8F8F8 100%);
-    padding: 2rem;
+    background: linear-gradient(145deg, #FFFFFF 0%, #F5F5F5 100%);
+    padding: 1.5rem;
     margin-block-end: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(38, 50, 56, 0.08);
-    border-block-start: 5px solid #558B2F;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(38, 50, 56, 0.06);
+    border-block-start: 4px solid #558B2F;
     text-align: center;
     border: 1px solid #F0F0F0;
 }
@@ -512,11 +467,11 @@ main {
 .owners-section,
 .chefs-section,
 .general-staff-section {
-    background: linear-gradient(145deg, #FFFFFF 0%, #FAFAFA 100%);
+    background: linear-gradient(145deg, #FFFFFF 0%, #F9F9F9 100%);
     padding: 2rem;
     margin-block-end: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(38, 50, 56, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(38, 50, 56, 0.08);
     text-align: center;
     transition: all 0.3s ease;
     display: inline-block;
@@ -533,8 +488,8 @@ main {
 .owners-section:hover,
 .chefs-section:hover,
 .general-staff-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 35px rgba(38, 50, 56, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(38, 50, 56, 0.12);
 }
 
 .owners-section h3,
@@ -542,7 +497,7 @@ main {
 .general-staff-section h3 {
     color: #C62828;
     margin-block-end: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 
 .owners-section img,
@@ -551,9 +506,9 @@ main {
     inline-size: 100%;
     block-size: 150px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
     margin: 1rem 0;
-    box-shadow: 0 4px 16px rgba(38, 50, 56, 0.2);
+    box-shadow: 0 3px 10px rgba(38, 50, 56, 0.15);
     transition: transform 0.3s ease;
 }
 
@@ -566,10 +521,10 @@ main {
 .owners-section p,
 .chefs-section p,
 .general-staff-section p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #555;
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* menu styles, 3x2 grid layout */
@@ -578,11 +533,11 @@ main {
 .vegetarian-pizza,
 .drinks,
 .extras {
-    margin-block-end: 3rem;
-    background: linear-gradient(145deg, #FFFFFF 0%, #FAFAFA 100%);
+    margin-block-end: 2.5rem;
+    background: linear-gradient(145deg, #FFFFFF 0%, #F9F9F9 100%);
     padding: 2.5rem;
-    border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(38, 50, 56, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(38, 50, 56, 0.08);
     border: 1px solid #F0F0F0;
 }
 
@@ -619,7 +574,7 @@ main {
 .pizza-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.8rem;
+    gap: 1.5rem;
     margin-block-end: 2rem;
 }
 
@@ -632,18 +587,18 @@ main {
 }
 
 .pizza-item {
-    background: linear-gradient(145deg, #FFF8E1 0%, #FFFFFF 100%);
-    padding: 1.8rem;
-    border-radius: 15px;
+    background: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 6px 20px rgba(38, 50, 56, 0.1);
+    box-shadow: 0 3px 12px rgba(38, 50, 56, 0.08);
     transition: all 0.3s ease;
-    border: 2px solid transparent;
+    border: 1px solid #F0F0F0;
 }
 
 .pizza-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(38, 50, 56, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(38, 50, 56, 0.15);
     border-color: #C62828;
 }
 
@@ -651,26 +606,26 @@ main {
     inline-size: 100%;
     block-size: 180px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 8px;
     margin-block-end: 1rem;
     transition: transform 0.3s ease;
 }
 
 .pizza-item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .pizza-item h3 {
     color: #C62828;
     font-size: 1.4rem;
-    margin-block-end: 1rem;
+    margin-block-end: 0.8rem;
 }
 
 .pizza-item p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     text-align: center;
     color: #555;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .drinks ul,
@@ -683,20 +638,21 @@ main {
 
 .drinks li,
 .extras li {
-    background: linear-gradient(135deg, #FFF8E1 0%, #F5F5DC 100%);
+    background: #FFFFFF;
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 8px;
     text-align: center;
     font-weight: 600;
     color: #263238;
-    box-shadow: 0 3px 10px rgba(38, 50, 56, 0.1);
+    box-shadow: 0 2px 8px rgba(38, 50, 56, 0.08);
     transition: all 0.3s ease;
+    border: 1px solid #F0F0F0;
 }
 
 .drinks li:hover,
 .extras li:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(38, 50, 56, 0.15);
+    box-shadow: 0 4px 16px rgba(38, 50, 56, 0.12);
     background: linear-gradient(135deg, #558B2F, #689F38);
     color: #FFF8E1;
 }
@@ -711,17 +667,18 @@ main {
     text-align: center;
     margin: 3rem 0;
     padding: 2rem;
-    background: linear-gradient(135deg, #FFF8E1 0%, #F5F5DC 100%);
-    border-radius: 15px;
+    background: linear-gradient(145deg, #FFFFFF 0%, #F9F9F9 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(38, 50, 56, 0.08);
 }
 
 /* contact page 2 column layout */
 .contact-content {
-    background: linear-gradient(145deg, #FFFFFF 0%, #FAFAFA 100%);
-    border-radius: 20px;
-    box-shadow: 0 10px 35px rgba(38, 50, 56, 0.12);
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(38, 50, 56, 0.08);
     overflow: hidden;
-    border: 1px solid #E8E8E8;
+    border: 1px solid #ECECEC;
 }
 
 .contact-layout {
@@ -734,26 +691,26 @@ main {
 .contact-form {
     padding: 2.5rem;
     background: #FFFFFF;
-    border-inline-end: 2px solid #E0E0E0;
+    border-inline-end: 1px solid #E5E5E5;
 }
 
 .contact-form h2 {
     color: #C62828;
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-block-end: 2rem;
     text-align: center;
 }
 
 .location-section {
     padding: 2.5rem;
-    background: #F8F8F8;
+    background: #FAFAFA;
     display: flex;
     flex-direction: column;
 }
 
 .location-section h2 {
     color: #C62828;
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-block-end: 1.5rem;
     text-align: center;
 }
@@ -766,38 +723,38 @@ main {
 .map-container {
     inline-size: 100%;
     block-size: 280px;
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 6px 18px rgba(38, 50, 56, 0.15);
+    box-shadow: 0 3px 12px rgba(38, 50, 56, 0.12);
 }
 
 .restaurant-address {
     background: linear-gradient(135deg, #558B2F 0%, #689F38 100%);
     color: #FFF8E1;
-    padding: 2rem;
-    border-radius: 10px;
+    padding: 1.5rem;
+    border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(85, 139, 47, 0.2);
+    box-shadow: 0 3px 8px rgba(85, 139, 47, 0.2);
 }
 
 .restaurant-address h3 {
     color: #FFF8E1;
-    margin-block-end: 1rem;
+    margin-block-end: 0.8rem;
 }
 
 .contact-info {
     margin-block-start: 2rem;
-    padding: 2rem;
+    padding: 1.5rem;
     background: linear-gradient(135deg, #C62828 0%, #B71C1C 100%);
     color: #FFF8E1;
-    border-radius: 10px;
+    border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(198, 40, 40, 0.2);
+    box-shadow: 0 3px 8px rgba(198, 40, 40, 0.2);
 }
 
 .contact-info h3 {
     color: #FFF8E1;
-    margin-block-end: 1rem;
+    margin-block-end: 0.8rem;
 }
 
 /* form group styling */
@@ -807,7 +764,7 @@ main {
 
 .form-group label {
     display: block;
-    margin-block-end: 0.5rem;
+    margin-block-end: 0.6rem;
     font-weight: 600;
     color: #263238;
     font-size: 1rem;
@@ -817,9 +774,9 @@ main {
 .form-group select,
 .form-group textarea {
     inline-size: 100%;
-    padding: 1rem;
-    border: 2px solid #E0E0E0;
-    border-radius: 10px;
+    padding: 0.9rem;
+    border: 1px solid #D0D0D0;
+    border-radius: 8px;
     font-size: 1rem;
     font-family: inherit;
     transition: all 0.3s ease;
@@ -832,14 +789,13 @@ main {
     outline: none;
     border-color: #C62828;
     box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.1);
-    transform: translateY(-2px);
 }
 
 .contact-info p,
 .restaurant-address p {
     margin-block-end: 0.5rem;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 .map-container iframe {
@@ -850,15 +806,15 @@ main {
 
 /* order form 1 column layout */
 .order-form-section {
-    background: linear-gradient(145deg, #FFFFFF 0%, #FAFAFA 100%);
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 35px rgba(38, 50, 56, 0.12);
+    background: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(38, 50, 56, 0.08);
     margin-block-end: 2rem;
     max-inline-size: 700px;
     margin-inline-start: auto;
     margin-inline-end: auto;
-    border: 1px solid #E8E8E8;
+    border: 1px solid #ECECEC;
 }
 
 .order-form {
@@ -880,7 +836,7 @@ main {
 
 .order-form .form-group label {
     display: block;
-    margin-block-end: 0.5rem;
+    margin-block-end: 0.6rem;
     font-weight: 600;
     color: #263238;
     font-size: 1rem;
@@ -890,8 +846,8 @@ main {
 .order-form .form-group select,
 .order-form .form-group textarea {
     inline-size: 100%;
-    padding: 1rem;
-    border: 2px solid #E0E0E0;
+    padding: 0.9rem;
+    border: 1px solid #D0D0D0;
     border-radius: 8px;
     font-size: 1rem;
     font-family: inherit;
@@ -909,33 +865,33 @@ main {
 
 /* promotions page 2x2 grid layout */
 .featured-pizzas {
-    background: linear-gradient(145deg, #FFFFFF 0%, #FAFAFA 100%);
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 35px rgba(38, 50, 56, 0.12);
-    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(38, 50, 56, 0.08);
+    border: 1px solid #ECECEC;
 }
 
 .featured-pizzas .pizza-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    margin-block-end: 2.5rem;
+    gap: 2rem;
+    margin-block-end: 2rem;
 }
 
 .featured-pizzas .pizza-item {
-    background: linear-gradient(145deg, #FFF8E1 0%, #FFFFFF 100%);
+    background: #FAFAFA;
     padding: 2rem;
-    border-radius: 15px;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 6px 20px rgba(38, 50, 56, 0.1);
+    box-shadow: 0 3px 12px rgba(38, 50, 56, 0.08);
     transition: all 0.3s ease;
-    border: 2px solid transparent;
+    border: 1px solid #F0F0F0;
 }
 
 .featured-pizzas .pizza-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(38, 50, 56, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(38, 50, 56, 0.15);
     border-color: #C62828;
 }
 
@@ -943,7 +899,7 @@ main {
     inline-size: 100%;
     block-size: 200px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 8px;
     margin-block-end: 1.5rem;
 }
 
@@ -964,9 +920,9 @@ footer {
     background: linear-gradient(135deg, #263238 0%, #37474F 100%);
     color: #FFF8E1;
     text-align: center;
-    padding: 2.5rem 2rem;
+    padding: 2rem 2rem;
     margin-block-start: 3rem;
-    box-shadow: 0 -6px 20px rgba(38, 50, 56, 0.25);
+    box-shadow: 0 -3px 12px rgba(38, 50, 56, 0.2);
 }
 
 footer p {
@@ -984,11 +940,11 @@ footer p {
 
     /* navigation (tablet adjustments) */
     header {
-        padding: 1.2rem 0;
+        padding: 1rem 0;
     }
 
     .nav-menu {
-        gap: 1rem;
+        gap: 0.5rem;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
@@ -997,12 +953,12 @@ footer p {
     .nav-menu li a {
         padding: 0.7rem 1.2rem;
         font-size: 0.95rem;
-        border-radius: 25px;
+        border-radius: 8px;
     }
 
     /* main content (tablet adjustments) */
     main {
-        padding: 1.5rem;
+        padding: 2rem 1.5rem;
     }
 
     /* homepage (tablet adjustments) */
@@ -1021,7 +977,7 @@ footer p {
     }
 
     .welcome-heading h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .tagline p {
@@ -1070,7 +1026,7 @@ footer p {
 
     .contact-form {
         border-inline-end: none;
-        border-block-end: 2px solid #E0E0E0;
+        border-block-end: 1px solid #E5E5E5;
     }
 
     /* order form (tablet adjustments) */
@@ -1093,24 +1049,24 @@ footer p {
     /* promotions grid (tablet adjustments) */
     .featured-pizzas .pizza-row {
         grid-template-columns: 1fr;
-        gap: 1.8rem;
+        gap: 1.5rem;
     }
 
     .order-form-section {
         max-inline-size: 90%;
-        padding: 2.5rem;
+        padding: 2rem;
     }
 }
 
 /* responsive design (mobile adjustments) */
 @media screen and (max-width: 480px) {
     html {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     /* navigation (mobile adjustments) */
     header {
-        padding: 1rem 0;
+        padding: 0.8rem 0;
     }
 
     nav {
@@ -1119,7 +1075,7 @@ footer p {
 
     .nav-menu {
         flex-direction: column;
-        gap: 0.8rem;
+        gap: 0.5rem;
     }
 
     .nav-menu li {
@@ -1129,24 +1085,20 @@ footer p {
 
     .nav-menu li a {
         display: block;
-        padding: 1rem;
+        padding: 0.8rem;
         font-size: 0.9rem;
-        border-radius: 15px;
+        border-radius: 8px;
         margin: 0;
-    }
-
-    .nav-menu li a:hover {
-        transform: translateY(-2px) scale(1.02);
     }
 
     /* main content (mobile adjustments) */
     main {
-        padding: 1rem;
+        padding: 1.5rem 1rem;
     }
 
     /* homepage (mobile adjustments) */
     .welcome-section {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1rem;
         margin-block-end: 1.5rem;
     }
 
@@ -1171,8 +1123,8 @@ footer p {
     }
 
     .welcome-heading h1 {
-        font-size: 1.6rem;
-        line-height: 1.2;
+        font-size: 1.8rem;
+        line-height: 1.3;
     }
 
     .tagline p {
@@ -1275,7 +1227,7 @@ footer p {
     }
 
     .order-form-section {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem;
         max-inline-size: 95%;
         margin: 0 auto 1.5rem auto;
     }
