@@ -157,14 +157,29 @@ This phase focused on transforming the HTML foundation into a visually appealing
 - **Browser Support**: Modern browsers with graceful degradation
 - **Code Organisation**: Modular CSS structure with clear commenting
 
-### Changelog:
-- Corrected image file naming convention (removed duplicate extension from `owners.jpg.jpg`)
-- Enhanced semantic HTML structure for better accessibility
-- Corrected HTML errors from Part 1
-- Improved navigation consistency across all pages
-- Added more descriptive alt text for images
-- Refined content organisation and readability
-- Added a sitemap
+### Changelog
+
+v1.0 – 27 Aug 2025: Initial commit; folder structure and base HTML pages (index, about, menu, contact, order, promotions); linked CSS and JS
+
+v1.1 – 28 Aug 2025: Fixed HTML validation issues; enhanced semantic structure; aligned navigation across pages
+
+v1.2 – 01 Sep 2025: Linked external CSS; applied base styles, typography (Google Fonts), and colour scheme
+
+v1.3 – 03 Sep 2025: Implemented Flexbox and Grid layouts; added hover and focus states; refined component styling
+
+v1.4 – 08 Sep 2025: Added responsive breakpoints (mobile/tablet/desktop); made navigation responsive; optimised images
+
+v1.5 – 12 Sep 2025: Improved accessibility (descriptive alt text); reorganised content for readability
+
+v1.6 – 20 Sep 2025: Completed cross‑browser testing; refined spacing and visual hierarchy; performance optimisations
+
+v1.7 – 26 Sep 2025: Added `sitemap.xml`; completed code validation ahead of submission
+
+v1.8 – 29 Sep 2025: Corrected image file naming (removed duplicate extension from `owners.jpg.jpg`); improved semantic HTML; updated README content
+
+v1.9 – 02 Oct 2025: Added “Responsiveness Testing and Iteration Across Devices” to README; uploaded device screenshots (iPhone, iPad mini, iPad Pro, MacBook Pro, iMac) under `images/responsiveness/`; grouped screenshots by Mobile, Tablet, Desktop; standardised `.jpg` extensions; ignored `.DS_Store`
+
+v2.0 – 02 Oct 2025: Updated changelog naming in README; general copy polish
 
 ## Responsiveness Testing and Iteration Across Devices
 
