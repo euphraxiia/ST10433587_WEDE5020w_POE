@@ -166,37 +166,44 @@ This phase focused on transforming the HTML foundation into a visually appealing
 - Refined content organisation and readability
 - Added a sitemap
 
-## Responsive Design Screenshots
+## Responsiveness Testing and Iteration Across Devices
 
-Below are screenshots demonstrating how the site adapts across common devices. Place your images in `images/responsiveness/` using these filenames (or update the paths below if you prefer different names):
+These screenshots show how the site responds on common devices after iterative testing and adjustments.
+
+### Mobile
+
+<p align="center">
+  <strong>iPhone</strong><br/>
+  <img src="images/responsiveness/iphone.jpg" alt="Campanella Pizza on iPhone (mobile)" width="280"/>
+</p>
+
+### Tablet
 
 <table>
   <tr>
     <td align="center">
-      <strong>iPhone</strong><br/>
-      <img src="images/responsiveness/iphone.jpg" alt="Campanella Pizza on iPhone" width="280"/>
-    </td>
-    <td align="center">
       <strong>iPad mini</strong><br/>
-      <img src="images/responsiveness/ipad-mini.jpg" alt="Campanella Pizza on iPad mini" width="360"/>
+      <img src="images/responsiveness/ipad-mini.jpg" alt="Campanella Pizza on iPad mini (tablet)" width="360"/>
     </td>
-  </tr>
-  <tr>
     <td align="center">
       <strong>iPad Pro</strong><br/>
-      <img src="images/responsiveness/ipad-pro.jpg" alt="Campanella Pizza on iPad Pro" width="420"/>
-    </td>
-    <td align="center">
-      <strong>MacBook Pro</strong><br/>
-      <img src="images/responsiveness/macbook-pro.jpg" alt="Campanella Pizza on MacBook Pro" width="520"/>
+      <img src="images/responsiveness/ipad-pro.jpg" alt="Campanella Pizza on iPad Pro (tablet)" width="420"/>
     </td>
   </tr>
+</table>
+
+### Desktop
+
+<table>
   <tr>
     <td align="center">
-      <strong>iMac</strong><br/>
-      <img src="images/responsiveness/imac.jpg" alt="Campanella Pizza on iMac" width="600"/>
+      <strong>MacBook Pro</strong><br/>
+      <img src="images/responsiveness/macbook-pro.jpg" alt="Campanella Pizza on MacBook Pro (desktop)" width="520"/>
     </td>
-    <td></td>
+    <td align="center">
+      <strong>iMac</strong><br/>
+      <img src="images/responsiveness/imac.jpg" alt="Campanella Pizza on iMac (desktop)" width="600"/>
+    </td>
   </tr>
 </table>
 
