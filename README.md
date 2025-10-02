@@ -191,6 +191,13 @@ Below are screenshots demonstrating how the site adapts across common devices. P
       <img src="images/responsiveness/macbook-pro.jpg" alt="Campanella Pizza on MacBook Pro" width="520"/>
     </td>
   </tr>
+  <tr>
+    <td align="center">
+      <strong>iMac</strong><br/>
+      <img src="images/responsiveness/imac.jpg" alt="Campanella Pizza on iMac" width="600"/>
+    </td>
+    <td></td>
+  </tr>
 </table>
 
 ## References
