@@ -174,21 +174,21 @@ Below are screenshots demonstrating how the site adapts across common devices. P
   <tr>
     <td align="center">
       <strong>iPhone</strong><br/>
-      <img src="images/responsiveness/iphone.png" alt="Campanella Pizza on iPhone" width="280"/>
+      <img src="images/responsiveness/iphone.jpg" alt="Campanella Pizza on iPhone" width="280"/>
     </td>
     <td align="center">
       <strong>iPad mini</strong><br/>
-      <img src="images/responsiveness/ipad-mini.png" alt="Campanella Pizza on iPad mini" width="360"/>
+      <img src="images/responsiveness/ipad-mini.jpg" alt="Campanella Pizza on iPad mini" width="360"/>
     </td>
   </tr>
   <tr>
     <td align="center">
       <strong>iPad Pro</strong><br/>
-      <img src="images/responsiveness/ipad-pro.png" alt="Campanella Pizza on iPad Pro" width="420"/>
+      <img src="images/responsiveness/ipad-pro.jpg" alt="Campanella Pizza on iPad Pro" width="420"/>
     </td>
     <td align="center">
       <strong>MacBook Pro</strong><br/>
-      <img src="images/responsiveness/macbook-pro.png" alt="Campanella Pizza on MacBook Pro" width="520"/>
+      <img src="images/responsiveness/macbook-pro.jpg" alt="Campanella Pizza on MacBook Pro" width="520"/>
     </td>
   </tr>
 </table>
