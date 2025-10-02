@@ -166,6 +166,33 @@ This phase focused on transforming the HTML foundation into a visually appealing
 - Refined content organisation and readability
 - Added a sitemap
 
+## Responsive Design Screenshots
+
+Below are screenshots demonstrating how the site adapts across common devices. Place your images in `images/responsiveness/` using these filenames (or update the paths below if you prefer different names):
+
+<table>
+  <tr>
+    <td align="center">
+      <strong>iPhone</strong><br/>
+      <img src="images/responsiveness/iphone.png" alt="Campanella Pizza on iPhone" width="280"/>
+    </td>
+    <td align="center">
+      <strong>iPad mini</strong><br/>
+      <img src="images/responsiveness/ipad-mini.png" alt="Campanella Pizza on iPad mini" width="360"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <strong>iPad Pro</strong><br/>
+      <img src="images/responsiveness/ipad-pro.png" alt="Campanella Pizza on iPad Pro" width="420"/>
+    </td>
+    <td align="center">
+      <strong>MacBook Pro</strong><br/>
+      <img src="images/responsiveness/macbook-pro.png" alt="Campanella Pizza on MacBook Pro" width="520"/>
+    </td>
+  </tr>
+</table>
+
 ## References
 
 Afrihost, 2025. Domains. [Online]. Available at: https://www.afrihost.com/domains. [Accessed on 28 July 2025].
