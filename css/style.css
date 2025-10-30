@@ -790,6 +790,7 @@ main {
     box-shadow: 0 3px 12px rgba(38, 50, 56, 0.08);
     transition: all 0.3s ease;
     border: 1px solid #F0F0F0;
+    display: block;
 }
 
 .drink-item-grid:hover {
@@ -801,7 +802,7 @@ main {
 .drink-item-grid img {
     inline-size: 100%;
     block-size: 180px;
-    object-fit: cover;
+    object-fit: cover; /* match pizza/extras */
     border-radius: 8px;
     margin-block-end: 1rem;
     transition: transform 0.3s ease;
@@ -816,6 +817,25 @@ main {
     font-size: 1.3rem;
     margin-block-end: 1rem;
     font-family: 'Playfair Display', serif;
+}
+
+/* Fine-tune the inline-injected drink controls */
+.drink-controls {
+    width: 100%;
+    margin-top: 10px;
+    row-gap: 8px;
+}
+.drink-controls .qty-wrap label {
+    color: #263238;
+}
+.drink-controls .drink-total {
+    font-weight: 800;
+    color: #C62828;
+}
+
+/* Slightly tighten legacy list-based drinks (if present) */
+.drinks .juice-controls {
+    gap: 10px !important;
 }
 
 .drink-placeholder {

@@ -54,7 +54,7 @@
                 <div class="hero-text">
                     <h1 class="hero-title">Campanella Pizza</h1>
                     <p class="hero-description">The taste your cravings deserve.</p>
-                    <a href="order.html" class="hero-order-btn">Order Pizza Now</a>
+                    <a href="menu.html" class="hero-order-btn">Order Pizza Now</a>
                 </div>
             </div>
         </section>
@@ -142,7 +142,27 @@
           },
           "telephone": "+27-16-362-2502",
           "servesCuisine": ["Pizza", "Italian"],
-          "url": "https://campanellapizza.example/"
+          "url": "https://campanellapizza.example/",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+              "opens": "10:00",
+              "closes": "21:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Friday", "Saturday"],
+              "opens": "10:00",
+              "closes": "22:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Sunday"],
+              "opens": "11:00",
+              "closes": "20:00"
+            }
+          ]
         }
         </script>
     </footer>

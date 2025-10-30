@@ -233,3 +233,17 @@ ColorHunt, n.d. Color Palettes for Designers and Artists. [Online]. Available at
 FreePik, n.d. Images. [Online]. Available at: https://www.freepik.com. [Accessed on 28 July 2025].
 
 Google Font, n.d. Free Fonts Library. [Online]. Available at: https://fonts.google.com. [Accessed on 28 July 2025].
+
+Leaflet, n.d. Leaflet — an open‑source JavaScript library for mobile‑friendly interactive maps. [Online]. Available at: https://leafletjs.com. [Accessed on 30 October 2025].
+
+OpenStreetMap Contributors, n.d. OpenStreetMap Tiles. [Online]. Available at: https://www.openstreetmap.org/copyright. [Accessed on 30 October 2025].
+
+Meta (Facebook), 2025. Campanella Pizza Facebook Page. [Online]. Available at: https://www.facebook.com/campanellapizza/. [Accessed on 30 October 2025].
+
+Instagram, 2025. Campanella Pizza Meyerton (@campanella_pizza_meyerton). [Online]. Available at: https://www.instagram.com/campanella_pizza_meyerton/. [Accessed on 30 October 2025].
+
+Schema.org, n.d. Restaurant — Schema.org Type. [Online]. Available at: https://schema.org/Restaurant. [Accessed on 30 October 2025].
+
+W3C, n.d. Sitemap Protocol. [Online]. Available at: https://www.sitemaps.org/protocol.html. [Accessed on 30 October 2025].
+
+Google Developers, n.d. Lazy‑loading images and video. [Online]. Available at: https://web.dev/articles/lazy-loading-images. [Accessed on 30 October 2025].

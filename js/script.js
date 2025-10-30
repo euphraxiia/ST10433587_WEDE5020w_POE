@@ -170,6 +170,11 @@ const utils = {
         <div style="margin:16px 0;">
           ${sizeOptions}
         </div>
+        <div style="margin:12px 0; display:flex; align-items:center; gap:10px;">
+          <span style="font-weight:600; color:#263238;">We Accept:</span>
+          <svg width="40" height="26" viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="40" rx="6" fill="#1A1F71"/><text x="50%" y="58%" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="18" fill="#FFFFFF">VISA</text></svg>
+          <svg width="40" height="26" viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="40" rx="6" fill="#000"/><g transform="translate(14,8)"><circle cx="12" cy="12" r="12" fill="#EB001B"/><circle cx="28" cy="12" r="12" fill="#F79E1B"/><path d="M20 0a12 12 0 0 0 0 24a12 12 0 0 0 0-24z" fill="#FF5F00"/></g></svg>
+        </div>
         <div style="display:flex; gap:10px; justify-content:flex-end; margin-block-start:8px;">
           <button class="cancel-size" style="padding:10px 16px; background:#ECEFF1; color:#263238; border:none; border-radius:8px; cursor:pointer; font-weight:600;">Cancel</button>
           <button class="confirm-size" style="padding:10px 16px; background:linear-gradient(135deg,#C62828,#B71C1C); color:#FFF8E1; border:none; border-radius:8px; cursor:pointer; font-weight:700;">Add to Cart</button>
@@ -680,12 +685,16 @@ const utils = {
       this.cart = window.shoppingCart;
       this.setupSearch();
       this.addMenuTabs();
-      this.renderMenuFromData();
-      this.setupCategoryAccordions();
-      this.addCartButtons();
-      this.enhanceDrinkSections();
-      this.enhanceDrinkCards();
-      this.addExtrasButtons();
+      // Ensure dynamic content is rendered BEFORE wiring buttons/controls
+      Promise.resolve(this.renderMenuFromData())
+        .catch(() => {})
+        .finally(() => {
+          this.setupCategoryAccordions();
+          this.addCartButtons();
+          this.enhanceDrinkSections();
+          this.enhanceDrinkCards();
+          this.addExtrasButtons();
+        });
     },
   
     setupSearch() {
@@ -752,6 +761,7 @@ const utils = {
       tabs.setAttribute('role', 'tablist');
       tabs.style.cssText = 'display:flex; gap:10px; justify-content:center; margin:10px 0 20px 0; flex-wrap:wrap;';
       const sections = [
+        { sel: '.meat-pizza, .chicken-pizza, .vegetarian-pizza, .drinks, .extras', id: 'all', label: 'All' },
         { sel: '.meat-pizza', id: 'meat', label: 'Meat' },
         { sel: '.chicken-pizza', id: 'chicken', label: 'Chicken' },
         { sel: '.vegetarian-pizza', id: 'vegetarian', label: 'Vegetarian' },
@@ -759,15 +769,27 @@ const utils = {
         { sel: '.extras', id: 'extras', label: 'Extras' }
       ];
       tabs.innerHTML = sections.map(({ id, label }) => `
-        <button role="tab" aria-controls="tab-${id}" data-target="${id}" class="tab-btn" style="padding:8px 14px; border-radius:999px; border:1px solid #E0E0E0; background:#fff; cursor:pointer; font-weight:600;">${label}</button>
+        <button id="tab-btn-${id}" role="tab" aria-controls="tab-${id}" data-target="${id}" class="tab-btn" style="padding:8px 14px; border-radius:999px; border:1px solid #E0E0E0; background:#fff; cursor:pointer; font-weight:600;">${label}</button>
       `).join('');
       container.after(tabs);
 
       const sectionEls = sections.map(s => ({ ...s, el: document.querySelector(s.sel) }));
+      // Ensure tabpanel semantics and ids exist
+      sectionEls.forEach(({ id, el }) => {
+        if (!el) return;
+        el.setAttribute('role', 'tabpanel');
+        el.setAttribute('id', `tab-${id}`);
+        el.setAttribute('aria-labelledby', `tab-btn-${id}`);
+      });
+      // Tabs act as filters: show only selected section; 'all' shows everything
       const activate = (id) => {
         sectionEls.forEach(({ id: sid, el }) => {
           if (!el) return;
-          el.style.display = sid === id ? '' : 'none';
+          if (id === 'all') {
+            el.style.display = '';
+          } else {
+            el.style.display = sid === id ? '' : 'none';
+          }
         });
         tabs.querySelectorAll('.tab-btn').forEach(btn => btn.setAttribute('aria-selected', btn.dataset.target === id ? 'true' : 'false'));
       };
@@ -783,8 +805,8 @@ const utils = {
         if (e.key === 'ArrowRight') { e.preventDefault(); buttons[(idx+1)%buttons.length].focus(); }
         if (e.key === 'ArrowLeft') { e.preventDefault(); buttons[(idx-1+buttons.length)%buttons.length].focus(); }
       });
-      // start with Meat visible
-      activate('meat');
+      // Start with All visible
+      activate('all');
     },
 
     async renderMenuFromData() {
@@ -863,6 +885,18 @@ const utils = {
   
         const pizza = pizzaData.getAllPizzas().find(p => p.name === name);
         if (!pizza) return;
+
+        // Add visible starting price badge if missing
+        if (!item.querySelector('.price-badge')) {
+          const titleEl = item.querySelector('h3');
+          if (titleEl) {
+            const badge = document.createElement('div');
+            badge.className = 'price-badge';
+            badge.textContent = `From ${utils.formatCurrency(pizzaData.prices.small)}`;
+            badge.style.cssText = 'display:inline-block; margin-top:6px; color:#C62828; font-weight:800;';
+            titleEl.after(badge);
+          }
+        }
   
         const controls = document.createElement('div');
         controls.className = 'pizza-controls';
@@ -876,6 +910,11 @@ const utils = {
           <select class="size-select" style="padding: 10px; border: 2px solid #D0D0D0; border-radius: 8px; font-size: 14px; font-family: 'Open Sans', sans-serif; cursor: pointer;">
             ${sizeOptions}
           </select>
+          <div class="qty-total" style="display:flex; align-items:center; gap:8px;">
+            <label style="font-size:14px; color:#555;">Qty</label>
+            <input type="number" class="pizza-qty" min="1" value="1" style="inline-size:70px; padding:8px; border:2px solid #D0D0D0; border-radius:8px; font-size:14px; text-align:center;" />
+            <span class="pizza-total" style="font-weight:700; color:#C62828; min-inline-size:90px; text-align:center;"></span>
+          </div>
           <button class="add-to-cart-btn" style="padding: 12px; background: linear-gradient(135deg, #C62828, #B71C1C); color: #FFF8E1; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: all 0.2s; font-family: 'Open Sans', sans-serif;">
             Add to Cart
           </button>
@@ -883,7 +922,20 @@ const utils = {
   
         item.appendChild(controls);
   
+        const sizeSelect = controls.querySelector('.size-select');
+        const qtyInput = controls.querySelector('.pizza-qty');
+        const totalEl = controls.querySelector('.pizza-total');
         const btn = controls.querySelector('.add-to-cart-btn');
+
+        const updateTotal = () => {
+          const size = sizeSelect.value;
+          const qty = Math.max(1, parseInt(qtyInput.value || '1', 10));
+          const unit = pizzaData.prices[size];
+          totalEl.textContent = utils.formatCurrency(unit * qty);
+        };
+        sizeSelect.addEventListener('change', updateTotal);
+        qtyInput.addEventListener('input', updateTotal);
+        updateTotal();
         btn.addEventListener('mouseenter', () => {
           btn.style.transform = 'translateY(-2px)';
           btn.style.boxShadow = '0 4px 12px rgba(198, 40, 40, 0.3)';
@@ -894,8 +946,9 @@ const utils = {
         });
   
         btn.addEventListener('click', () => {
-          const size = controls.querySelector('.size-select').value;
-          this.cart.addItem(pizza, size, 1);
+          const size = sizeSelect.value;
+          const qty = Math.max(1, parseInt(qtyInput.value || '1', 10));
+          this.cart.addItem(pizza, size, qty);
         });
       });
     }
@@ -925,6 +978,7 @@ const utils = {
                 <label for=\"\" style=\"font-size: 14px; color:#555;\">Qty</label>
                 <input type=\"number\" class=\"juice-qty\" min=\"1\" value=\"1\" style=\"inline-size:70px; padding:8px; border: 2px solid #D0D0D0; border-radius: 8px; font-size: 14px; text-align: center;\" />
               </div>
+              <span class=\"juice-total\" style=\"font-weight:700; color:#C62828; min-inline-size:90px; text-align:center;\"></span>
               <button class=\"juice-add-btn\" style=\"padding: 10px 14px; background: linear-gradient(135deg, #C62828, #B71C1C); color: #FFF8E1; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 14px;\">Add to Cart</button>
             </div>
           `;
@@ -933,7 +987,18 @@ const utils = {
 
           const sizeSelect = container.querySelector('.juice-size');
           const qtyInput = container.querySelector('.juice-qty');
+          const totalEl = container.querySelector('.juice-total');
           const addBtn = container.querySelector('.juice-add-btn');
+
+          const updateTotal = () => {
+            const size = sizeSelect.value;
+            const qty = Math.max(1, parseInt(qtyInput.value || '1', 10));
+            const unit = prices[size];
+            totalEl.textContent = utils.formatCurrency(unit * qty);
+          };
+          sizeSelect.addEventListener('change', updateTotal);
+          qtyInput.addEventListener('input', updateTotal);
+          updateTotal();
 
           addBtn.addEventListener('click', () => {
             const size = sizeSelect.value;
@@ -993,9 +1058,26 @@ const utils = {
 
           const sizeSelect = controls.querySelector('.drink-size');
           const qtyInput = controls.querySelector('.drink-qty');
+          // ensure visible total next to Qty
+          let totalEl = controls.querySelector('.drink-total');
+          if (!totalEl) {
+            totalEl = document.createElement('span');
+            totalEl.className = 'drink-total';
+            totalEl.style.cssText = 'font-weight:700; color:#C62828; min-inline-size:90px; text-align:center;';
+            const btnRef = controls.querySelector('.drink-add-btn');
+            controls.insertBefore(totalEl, btnRef);
+          }
+          const updateDrinkTotal = () => {
+            const size = sizeSelect.value;
+            const qty = Math.max(1, parseInt(qtyInput.value || '1', 10));
+            const unit = prices[size];
+            totalEl.textContent = utils.formatCurrency(unit * qty);
+          };
+          sizeSelect.addEventListener('change', updateDrinkTotal);
+          qtyInput.addEventListener('input', updateDrinkTotal);
+          updateDrinkTotal();
           const addBtn = controls.querySelector('.drink-add-btn');
 
-          // no visible pricing; keep internal pricing for cart only
           addBtn.addEventListener('click', () => {
             const size = sizeSelect.value;
             const qty = Math.max(1, parseInt(qtyInput.value || '1', 10));
@@ -1090,10 +1172,49 @@ const utils = {
     },
 
     getItemImageSrc(item) {
+      // Pizzas use structured data
       if (item.pizzaId) {
         const p = pizzaData.findPizza(item.pizzaId);
         if (p?.img) return `images/menu/${p.img}`;
       }
+
+      // Drinks & Extras: best-effort mapping by name
+      const mapping = {
+        // Drinks
+        'coke': 'coke.jpg',
+        'fanta grape': 'fanta-grape.jpg',
+        'fanta orange': 'fanta-orange.jpg',
+        'sparletta raspberry': 'sparletta-raspberry.jpg',
+        'still water': 'still-water.jpg',
+        'sparkling water': 'sparkling-water.jpg',
+        'strawberry milkshake': 'strawberry-milkshake.jpg',
+        'chocolate milkshake': 'chocolate-milkshake.jpg',
+        'vanilla milkshake': 'vanilla-milkshake.jpg',
+        'cream soda milkshake': 'cream-soda-milkshake.jpg',
+        'apple juice': 'apple-juice.jpg',
+        'orange juice': 'orange-juice.jpg',
+        'mango and orange juice': 'mango-juice.jpg',
+        'mango & orange juice': 'mango-juice.jpg',
+        'tropical juice': 'tropical-juice.jpg',
+        // Extras
+        'garlic bread': 'garlic-bread.jpg',
+        'caesar salad': 'caesar-salad.jpg',
+        'garden salad': 'garden-salad.jpg',
+        'chicken wings': 'chicken-wings.jpg',
+        'potato wedges': 'potato-wedges.jpg',
+        'onion rings': 'onion-rings.jpg'
+      };
+
+      const baseName = (item.name || '')
+        .toString()
+        .toLowerCase()
+        .replace(/\s*\([^)]*\)\s*/g, '') // drop suffix like (Soda)
+        .replace(/&/g, 'and')
+        .trim();
+      const file = mapping[baseName];
+      if (file) return `images/menu/${file}`;
+
+      // Fallback placeholder with initial
       const letter = (item.category || 'I').toString().charAt(0).toUpperCase();
       const svg = encodeURIComponent(`
         <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64'>
