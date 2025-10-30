@@ -119,6 +119,25 @@
                 <div class="form-group">
                     <label for="card-number">Credit Card Number:</label>
                     <input type="text" id="card-number" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+                    
+                    <!-- Payment method icons -->
+                    <div class="payment-methods">
+                        <span class="payment-label">We Accept:</span>
+                        <div class="payment-icons">
+                            <svg class="payment-icon" role="img" aria-label="Visa" title="Visa" viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="64" height="40" rx="6" fill="#1A1F71"/>
+                                <text x="50%" y="58%" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="18" fill="#FFFFFF">VISA</text>
+                            </svg>
+                            <svg class="payment-icon" role="img" aria-label="Mastercard" title="Mastercard" viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="64" height="40" rx="6" fill="#000000"/>
+                                <g transform="translate(14,8)">
+                                    <circle cx="12" cy="12" r="12" fill="#EB001B"/>
+                                    <circle cx="28" cy="12" r="12" fill="#F79E1B"/>
+                                    <path d="M20 0a12 12 0 0 0 0 24a12 12 0 0 0 0-24z" fill="#FF5F00"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="form-group">
@@ -141,9 +160,32 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Campanella Pizza. All Rights Reserved.</p>
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-bottom">
+            <p>&copy; 2025 Campanella Pizza. All Rights Reserved.</p>
+            
+            <!-- Payment methods -->
+            <div class="payment-methods-footer">
+                <span class="payment-label">We Accept:</span>
+                <div class="payment-icons">
+                    <svg class="payment-icon" role="img" aria-label="Visa" title="Visa" viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="64" height="40" rx="6" fill="#1A1F71"/>
+                        <text x="50%" y="58%" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="18" fill="#FFFFFF">VISA</text>
+                    </svg>
+                    <svg class="payment-icon" role="img" aria-label="Mastercard" title="Mastercard" viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="64" height="40" rx="6" fill="#000000"/>
+                        <g transform="translate(14,8)">
+                            <circle cx="12" cy="12" r="12" fill="#EB001B"/>
+                            <circle cx="28" cy="12" r="12" fill="#F79E1B"/>
+                            <path d="M20 0a12 12 0 0 0 0 24a12 12 0 0 0 0-24z" fill="#FF5F00"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script src="js/script.js"></script>
     
 </body>
 </html>

@@ -8,6 +8,19 @@
     <!-- Title of the page -->
     <title>Campanella Pizza | Home</title>
     <meta name="description" content="Campanella Pizza serves fresh, authentic wood-fired pizza in Meyerton since 2014. Family-owned pizzeria with locally sourced ingredients.">
+    <link rel="canonical" href="https://campanellapizza.example/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Campanella Pizza | Crispy and Delicious Pizzas">
+    <meta property="og:description" content="Family-owned pizzeria in Meyerton. Order fresh, authentic pizzas online.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://campanellapizza.example/">
+    <meta property="og:image" content="images/hero/pizza-background.jpg">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Campanella Pizza | Crispy and Delicious Pizzas">
+    <meta name="twitter:description" content="Family-owned pizzeria in Meyerton. Order fresh, authentic pizzas online.">
+    <meta name="twitter:image" content="images/hero/pizza-background.jpg">
 
     <!-- Add font links + CSS link -->
     <link rel="stylesheet" href="css/style.css">
@@ -16,7 +29,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
-<body> 
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
     <!-- Main navigation menu -->
     <header>
         <nav>
@@ -32,32 +46,46 @@
     </header>
 
     <!-- Main content area -->
-    <main>
-        <!-- Welcome section matching wireframe layout -->
-        <section class="welcome-section">
-            <!-- Welcome message heading -->
-            <div class="welcome-heading">
-                <h1>Welcome to Campanella Pizza</h1>
+    <main id="main-content">
+        <!-- Hero section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <!-- Left side: Company name and tagline -->
+                <div class="hero-text">
+                    <h1 class="hero-title">Campanella Pizza</h1>
+                    <p class="hero-description">The taste your cravings deserve.</p>
+                    <a href="order.html" class="hero-order-btn">Order Pizza Now</a>
+                </div>
             </div>
-            
-            <!-- Two-column content matching wireframe -->
-            <div class="homepage-content">
-                <!-- Left side: Tagline and button -->
-                <div class="tagline-section">
-                    <div class="company-name">
-                        <h2>Campanella Pizza</h2>
-                    </div>
-                    <div class="tagline">
-                        <p>The taste your cravings deserve.</p>
-                    </div>
-                    <!-- Order now button under tagline -->
-                    <a href="order.html" class="order-now-btn">Order Now</a>
-                </div>
+        </section>
 
-                <!-- Right side: Pizza image -->
-                <div class="pizza-hero-image">
-                    <img src="images/hero/pizza-background.jpg" alt="Delicious Campanella Pizza">
-                </div>
+        <!-- Customer testimonials section with container -->
+        <section class="testimonials-container">
+            <div class="testimonials-heading">
+                <h2>What Our Customers Say</h2>
+            </div>
+
+            <div class="testimonials-sections">
+                <!-- Monique's review -->
+                <section class="monique-review">
+                    <h3>Monique Viljoen</h3>
+                    <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p>"Best pizza in Meyerton! Crispy base, generous toppings, and quick service."</p>
+                </section>
+
+                <!-- Smith's review -->
+                <section class="smith-review">
+                    <h3>Smith Mbele</h3>
+                    <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p>"Consistently great quality. The family deal is unbeatable value."</p>
+                </section>
+
+                <!-- Ulikhaya's review -->
+                <section class="ulikhaya-review">
+                    <h3>Ulikhaya Mazibuko</h3>
+                    <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p>"Friendly team and fresh ingredients. Our go-to Friday night spot."</p>
+                </section>
             </div>
         </section>
 
@@ -75,8 +103,51 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Campanella Pizza. All Rights Reserved.</p>
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-bottom">
+            <p>&copy; 2025 Campanella Pizza. All Rights Reserved.</p>
+            
+            <!-- Payment methods -->
+            <div class="payment-methods-footer">
+                <span class="payment-label">We Accept:</span>
+                <div class="payment-icons">
+                    <svg class="payment-icon" role="img" aria-label="Visa" title="Visa" viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="64" height="40" rx="6" fill="#1A1F71"/>
+                        <text x="50%" y="58%" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="18" fill="#FFFFFF">VISA</text>
+                    </svg>
+                    <svg class="payment-icon" role="img" aria-label="Mastercard" title="Mastercard" viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="64" height="40" rx="6" fill="#000000"/>
+                        <g transform="translate(14,8)">
+                            <circle cx="12" cy="12" r="12" fill="#EB001B"/>
+                            <circle cx="28" cy="12" r="12" fill="#F79E1B"/>
+                            <path d="M20 0a12 12 0 0 0 0 24a12 12 0 0 0 0-24z" fill="#FF5F00"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Restaurant schema -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Restaurant",
+          "name": "Campanella Pizza",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "19 Loch Street",
+            "addressLocality": "Meyerton",
+            "addressRegion": "Gauteng",
+            "addressCountry": "ZA"
+          },
+          "telephone": "+27-16-362-2502",
+          "servesCuisine": ["Pizza", "Italian"],
+          "url": "https://campanellapizza.example/"
+        }
+        </script>
     </footer>
+
+    <script src="js/script.js"></script>
+    
 </body>
 </html>
