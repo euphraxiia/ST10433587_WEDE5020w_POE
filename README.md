@@ -219,18 +219,6 @@ This final phase focused on implementing advanced JavaScript functionality, inte
 
 For detailed version history and all changes, see [CHANGELOG.md](CHANGELOG.md).
 
-**Phase 3 Versions:**
-
-v2.1 – 30 Oct 2025: Initial JavaScript implementation; added shopping cart functionality with local storage; implemented dynamic menu loading from JSON data; created pizza size selection modal with dynamic pricing
-
-v2.2 – 30 Oct 2025: Enhanced interactivity with accessible menu tabs; implemented debounced search functionality with ARIA live regions; upgraded gallery lightbox with keyboard navigation (arrows, ESC) and swipe support; added category accordions
-
-v2.3 – 30 Oct 2025: Implemented comprehensive contact form validation (email, phone, required fields); added AJAX-style form submission with confirmation modal; created smooth scroll animations; enhanced social media integration
-
-v2.4 – 30 Oct 2025: Added SEO enhancements (meta tags, canonical links, keyword injection); implemented lazy loading for images; created 404 error page; standardised responsive breakpoints to 768px; added comprehensive accessibility features (skip links, ARIA labels, keyboard navigation)
-
-v2.5 – 31 Oct 2025: Final polish and bug fixes; replaced payment icons with custom SVG versions; removed debug styles; standardised CSS logical properties for consistency; final validation and testing
-
 **Phase 1 & 2 Versions:**
 
 v1.0 – 27 Aug 2025: Initial commit; folder structure and base HTML pages (index, about, menu, contact, order, promotions); linked CSS and JS
@@ -251,9 +239,21 @@ v1.7 – 26 Sep 2025: Added `sitemap.xml`; completed code validation ahead of su
 
 v1.8 – 29 Sep 2025: Corrected image file naming (removed duplicate extension from `owners.jpg.jpg`); improved semantic HTML; updated README content
 
-v1.9 – 02 Oct 2025: Added “Responsiveness Testing and Iteration Across Devices” to README; uploaded device screenshots (iPhone, iPad mini, iPad Pro, MacBook Pro, iMac) under `images/responsiveness/`; grouped screenshots by Mobile, Tablet, Desktop; standardised `.jpg` extensions; ignored `.DS_Store`
+v1.9 – 02 Oct 2025: Added "Responsiveness Testing and Iteration Across Devices" to README; uploaded device screenshots (iPhone, iPad mini, iPad Pro, MacBook Pro, iMac) under `images/responsiveness/`; grouped screenshots by Mobile, Tablet, Desktop; standardised `.jpg` extensions; ignored `.DS_Store`
 
 v2.0 – 02 Oct 2025: Updated changelog naming in README; general copy polish
+
+**Phase 3 Versions:**
+
+v2.1 – 30 Oct 2025: Initial JavaScript implementation; added shopping cart functionality with local storage; implemented dynamic menu loading from JSON data; created pizza size selection modal with dynamic pricing
+
+v2.2 – 30 Oct 2025: Enhanced interactivity with accessible menu tabs; implemented debounced search functionality with ARIA live regions; upgraded gallery lightbox with keyboard navigation (arrows, ESC) and swipe support; added category accordions
+
+v2.3 – 30 Oct 2025: Implemented comprehensive contact form validation (email, phone, required fields); added AJAX-style form submission with confirmation modal; created smooth scroll animations; enhanced social media integration
+
+v2.4 – 30 Oct 2025: Added SEO enhancements (meta tags, canonical links, keyword injection); implemented lazy loading for images; created 404 error page; standardised responsive breakpoints to 768px; added comprehensive accessibility features (skip links, ARIA labels, keyboard navigation)
+
+v2.5 – 31 Oct 2025: Final polish and bug fixes; replaced payment icons with custom SVG versions; removed debug styles; standardised CSS logical properties for consistency; final validation and testing
 
 ## Responsiveness Testing and Iteration Across Devices
 
@@ -306,20 +306,18 @@ ColorHunt, n.d. Color Palettes for Designers and Artists. [Online]. Available at
 
 FreePik, n.d. Images. [Online]. Available at: https://www.freepik.com. [Accessed on 28 July 2025].
 
+Google Developers, n.d. Lazy‑loading images and video. [Online]. Available at: https://web.dev/articles/lazy-loading-images. [Accessed on 30 October 2025].
+
 Google Font, n.d. Free Fonts Library. [Online]. Available at: https://fonts.google.com. [Accessed on 28 July 2025].
 
-Google Developers, n.d. Lazy‑loading images and video. [Online]. Available at: https://web.dev/articles/lazy-loading-images. [Accessed on 30 October 2025].
+Instagram, 2025. Campanella Pizza Meyerton (@campanella_pizza_meyerton). [Online]. Available at: https://www.instagram.com/campanella_pizza_meyerton/. [Accessed on 30 October 2025].
 
 Leaflet, n.d. Leaflet — an open‑source JavaScript library for mobile‑friendly interactive maps. [Online]. Available at: https://leafletjs.com. [Accessed on 30 October 2025].
 
-OpenStreetMap Contributors, n.d. OpenStreetMap Tiles. [Online]. Available at: https://www.openstreetmap.org/copyright. [Accessed on 30 October 2025].
-
 Meta (Facebook), 2025. Campanella Pizza Facebook Page. [Online]. Available at: https://www.facebook.com/campanellapizza/. [Accessed on 30 October 2025].
 
-Instagram, 2025. Campanella Pizza Meyerton (@campanella_pizza_meyerton). [Online]. Available at: https://www.instagram.com/campanella_pizza_meyerton/. [Accessed on 30 October 2025].
+OpenStreetMap Contributors, n.d. OpenStreetMap Tiles. [Online]. Available at: https://www.openstreetmap.org/copyright. [Accessed on 30 October 2025].
 
 Schema.org, n.d. Restaurant — Schema.org Type. [Online]. Available at: https://schema.org/Restaurant. [Accessed on 30 October 2025].
 
 W3C, n.d. Sitemap Protocol. [Online]. Available at: https://www.sitemaps.org/protocol.html. [Accessed on 30 October 2025].
-
-
