@@ -255,6 +255,8 @@ v2.4 – 30 Oct 2025: Added SEO enhancements (meta tags, canonical links, keywor
 
 v2.5 – 31 Oct 2025: Final polish and bug fixes; replaced payment icons with custom SVG versions; removed debug styles; standardised CSS logical properties for consistency; final validation and testing
 
+v2.6 – 31 Oct 2025: Fixed sitemap.xml with missing 404.html and updated dates; corrected README.md submission dates; added CHANGELOG.md with comprehensive version history
+
 ## Responsiveness Testing and Iteration Across Devices
 
 These screenshots show how the site responds on common devices after iterative testing and adjustments.

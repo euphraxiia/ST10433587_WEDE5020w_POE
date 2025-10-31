@@ -5,6 +5,16 @@ All notable changes to the Campanella Pizza Website project are documented in th
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.6] - 2025-10-31
+
+### Fixed
+- Updated sitemap.xml with missing 404.html page
+- Updated all sitemap lastmod dates to current (October 2025)
+- README.md submission date correction (19 November 2025)
+
+### Added
+- CHANGELOG.md with comprehensive version history
+
 ## [2.5] - 2025-10-31
 
 ### Changed
