@@ -219,17 +219,17 @@ This final phase focused on implementing advanced JavaScript functionality, inte
 
 For detailed version history and all changes, see [CHANGELOG.md](CHANGELOG.md).
 
-**Recent Versions:**
+**Phase 3 Versions:**
 
-v2.5 – 31 Oct 2025: Final polish and bug fixes; replaced payment icons with custom SVG versions; removed debug styles; standardised CSS logical properties for consistency; final validation and testing
-
-v2.4 – 30 Oct 2025: Added SEO enhancements (meta tags, canonical links, keyword injection); implemented lazy loading for images; created 404 error page; standardised responsive breakpoints to 768px; added comprehensive accessibility features (skip links, ARIA labels, keyboard navigation)
-
-v2.3 – 30 Oct 2025: Implemented comprehensive contact form validation (email, phone, required fields); added AJAX-style form submission with confirmation modal; created smooth scroll animations; enhanced social media integration
+v2.1 – 30 Oct 2025: Initial JavaScript implementation; added shopping cart functionality with local storage; implemented dynamic menu loading from JSON data; created pizza size selection modal with dynamic pricing
 
 v2.2 – 30 Oct 2025: Enhanced interactivity with accessible menu tabs; implemented debounced search functionality with ARIA live regions; upgraded gallery lightbox with keyboard navigation (arrows, ESC) and swipe support; added category accordions
 
-v2.1 – 30 Oct 2025: Initial JavaScript implementation; added shopping cart functionality with local storage; implemented dynamic menu loading from JSON data; created pizza size selection modal with dynamic pricing
+v2.3 – 30 Oct 2025: Implemented comprehensive contact form validation (email, phone, required fields); added AJAX-style form submission with confirmation modal; created smooth scroll animations; enhanced social media integration
+
+v2.4 – 30 Oct 2025: Added SEO enhancements (meta tags, canonical links, keyword injection); implemented lazy loading for images; created 404 error page; standardised responsive breakpoints to 768px; added comprehensive accessibility features (skip links, ARIA labels, keyboard navigation)
+
+v2.5 – 31 Oct 2025: Final polish and bug fixes; replaced payment icons with custom SVG versions; removed debug styles; standardised CSS logical properties for consistency; final validation and testing
 
 **Phase 1 & 2 Versions:**
 
@@ -308,6 +308,8 @@ FreePik, n.d. Images. [Online]. Available at: https://www.freepik.com. [Accessed
 
 Google Font, n.d. Free Fonts Library. [Online]. Available at: https://fonts.google.com. [Accessed on 28 July 2025].
 
+Google Developers, n.d. Lazy‑loading images and video. [Online]. Available at: https://web.dev/articles/lazy-loading-images. [Accessed on 30 October 2025].
+
 Leaflet, n.d. Leaflet — an open‑source JavaScript library for mobile‑friendly interactive maps. [Online]. Available at: https://leafletjs.com. [Accessed on 30 October 2025].
 
 OpenStreetMap Contributors, n.d. OpenStreetMap Tiles. [Online]. Available at: https://www.openstreetmap.org/copyright. [Accessed on 30 October 2025].
@@ -320,4 +322,4 @@ Schema.org, n.d. Restaurant — Schema.org Type. [Online]. Available at: https:/
 
 W3C, n.d. Sitemap Protocol. [Online]. Available at: https://www.sitemaps.org/protocol.html. [Accessed on 30 October 2025].
 
-Google Developers, n.d. Lazy‑loading images and video. [Online]. Available at: https://web.dev/articles/lazy-loading-images. [Accessed on 30 October 2025].
+
