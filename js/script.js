@@ -714,7 +714,7 @@ const utils = {
           transition: border-color 0.3s;
           font-family: 'Open Sans', sans-serif;
         ">
-        <div id="search-results" style="margin-block-start: 12px; color: #666; font-size: 14px;" role="status" aria-live="polite"></div>
+        <div id="search-results" style="margin-top: 12px; color: #666; font-size: 14px;" role="status" aria-live="polite"></div>
       `;
   
       const heading = main.querySelector('.menu-heading');
@@ -1162,7 +1162,7 @@ const utils = {
       summary.innerHTML = `
         <h2 style="margin:0 0 12px 0; color:#263238; font-family:'Playfair Display', serif;">Your Order Summary</h2>
         <div class="summary-body"></div>
-        <div class="summary-total" style="margin-block-start: 12px; display:flex; justify-content: space-between; font-weight: 700; font-size: 1.1rem;">
+        <div class="summary-total" style="margin-top: 12px; display:flex; justify-content: space-between; font-weight: 700; font-size: 1.1rem;">
           <span>Total</span>
           <span class="summary-total-amount" style="color:#C62828;">R0.00</span>
         </div>
@@ -1255,7 +1255,7 @@ const utils = {
               <span style="min-inline-size: 24px; text-align:center; font-weight:600;">${item.quantity}</span>
               <button class="cs-qty" data-index="${index}" data-action="increase" style="inline-size:28px; block-size:28px; border:1px solid #ddd; background:white; border-radius:4px; cursor:pointer;">+</button>
               <button class="cs-remove" data-index="${index}" style="margin-inline-start:6px; padding:6px 10px; background:#dc3545; color:white; border:none; border-radius:4px; cursor:pointer; font-size:12px;">Remove</button>
-              <div style="min-inline-size:90px; text-align:end; font-weight:700; color:#C62828;">${utils.formatCurrency(lineTotal)}</div>
+              <div style="min-width:90px; text-align:right; font-weight:700; color:#C62828;">${utils.formatCurrency(lineTotal)}</div>
             </div>
           </div>
         `;
@@ -1357,7 +1357,7 @@ const utils = {
       const error = document.createElement('div');
       error.className = 'error-message';
       error.textContent = message;
-      error.style.cssText = 'color: #C62828; font-size: 14px; margin-block-start: 6px; font-weight: 500;';
+      error.style.cssText = 'color: #C62828; font-size: 14px; margin-top: 6px; font-weight: 500;';
   
       input.parentElement.appendChild(error);
     },
@@ -1602,7 +1602,7 @@ const utils = {
       const error = document.createElement('div');
       error.className = 'error-message';
       error.textContent = message;
-      error.style.cssText = 'color: #C62828; font-size: 14px; margin-block-start: 6px; font-weight: 500;';
+      error.style.cssText = 'color: #C62828; font-size: 14px; margin-top: 6px; font-weight: 500;';
   
       input.parentElement.appendChild(error);
     },
