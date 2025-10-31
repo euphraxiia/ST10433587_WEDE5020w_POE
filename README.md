@@ -157,7 +157,81 @@ This phase focused on transforming the HTML foundation into a visually appealing
 - **Browser Support**: Modern browsers with graceful degradation
 - **Code Organisation**: Modular CSS structure with clear commenting
 
+## Phase 3: JavaScript Interactivity and Final Enhancements (Weeks 10 - 12)
+
+**Duration**: 26 September - 14 October 2025
+
+This final phase focused on implementing advanced JavaScript functionality, interactive features, and comprehensive enhancements to create a fully functional, user-friendly website experience.
+
+### Week 10: JavaScript Foundation and Core Features
+**Dates**: 26 September - 3 October 2025
+- Implemented shopping cart functionality with local storage persistence
+- Created dynamic menu loading system using JSON data file
+- Developed pizza size selection modal with dynamic pricing
+- Added quantity selectors and price calculators for menu items
+- Implemented cart badge with real-time item count display
+
+### Week 11: Interactive Elements and User Experience
+**Dates**: 3 - 10 October 2025
+- Added accessible menu category tabs with keyboard navigation (Arrow keys)
+- Implemented menu search functionality with debounced input and ARIA live regions
+- Enhanced gallery lightbox with next/previous navigation, ESC key, and swipe support
+- Created contact form with comprehensive validation (email, phone, required fields)
+- Added AJAX-style form submission with confirmation modal
+- Implemented smooth scroll animations for enhanced user experience
+- Added category accordions for collapsible menu sections
+
+### Week 12: SEO, Accessibility, and Final Polish
+**Dates**: 10 - 14 October 2025
+- Implemented SEO enhancements (meta tags, canonical links, keyword injection)
+- Added lazy loading for images to improve page load performance
+- Created 404 error page for better user experience
+- Enhanced social media integration (Facebook, Instagram)
+- Standardised responsive breakpoints to 768px for consistent mobile/tablet experience
+- Added comprehensive form validation with inline error messages
+- Implemented South African phone number validation
+- Created robots.txt and enhanced sitemap.xml for search engine optimisation
+- Added skip-to-content link for screen reader accessibility
+- Implemented ARIA labels and live regions throughout the site
+- Replaced payment icons with custom SVG versions (Visa, Mastercard)
+- Removed debug styles and polished final code
+- **Part 3 Submission**: 14 October 2025
+
+### Key Achievements in Phase 3:
+- **Interactive Shopping Cart**: Fully functional cart with persistence, quantity management, and checkout flow
+- **Dynamic Content Loading**: Menu items loaded from JSON with fallback to static HTML
+- **Enhanced User Experience**: Search, filtering, lightbox, and modal systems
+- **Form Validation**: Comprehensive client-side validation with helpful error messages
+- **SEO Optimisation**: Meta tags, sitemap, robots.txt, and lazy loading implemented
+- **Accessibility**: Keyboard navigation, ARIA labels, skip links, and focus management
+- **Performance**: Code optimisation, lazy loading, and efficient event handling
+
+### Technical Specifications:
+- **JavaScript Framework**: Vanilla JavaScript (no dependencies)
+- **Data Storage**: Local Storage for cart persistence
+- **Dynamic Loading**: Fetch API for JSON menu data
+- **Event Handling**: Debouncing, event delegation, and optimal listeners
+- **Responsive Breakpoint**: Standardised to 768px for consistency
+- **Map Integration**: Leaflet.js with OpenStreetMap tiles
+- **Code Organisation**: Modular structure with clear separation of concerns
+
 ### Changelog
+
+For detailed version history and all changes, see [CHANGELOG.md](CHANGELOG.md).
+
+**Recent Versions:**
+
+v2.5 – 31 Oct 2025: Final polish and bug fixes; replaced payment icons with custom SVG versions; removed debug styles; standardised CSS logical properties for consistency; final validation and testing
+
+v2.4 – 30 Oct 2025: Added SEO enhancements (meta tags, canonical links, keyword injection); implemented lazy loading for images; created 404 error page; standardised responsive breakpoints to 768px; added comprehensive accessibility features (skip links, ARIA labels, keyboard navigation)
+
+v2.3 – 30 Oct 2025: Implemented comprehensive contact form validation (email, phone, required fields); added AJAX-style form submission with confirmation modal; created smooth scroll animations; enhanced social media integration
+
+v2.2 – 30 Oct 2025: Enhanced interactivity with accessible menu tabs; implemented debounced search functionality with ARIA live regions; upgraded gallery lightbox with keyboard navigation (arrows, ESC) and swipe support; added category accordions
+
+v2.1 – 30 Oct 2025: Initial JavaScript implementation; added shopping cart functionality with local storage; implemented dynamic menu loading from JSON data; created pizza size selection modal with dynamic pricing
+
+**Phase 1 & 2 Versions:**
 
 v1.0 – 27 Aug 2025: Initial commit; folder structure and base HTML pages (index, about, menu, contact, order, promotions); linked CSS and JS
 
