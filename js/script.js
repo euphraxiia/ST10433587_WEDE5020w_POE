@@ -335,7 +335,7 @@ const utils = {
       const navMenu = document.querySelector('.nav-menu');
       const spans = hamburger.querySelectorAll('span');
   
-      if (window.innerWidth <= 480) {
+      if (window.innerWidth <= 768) {
         hamburger.style.display = 'flex';
         if (navMenu && !hamburger.classList.contains('active')) {
           navMenu.style.display = 'none';

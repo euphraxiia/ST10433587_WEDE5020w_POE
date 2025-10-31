@@ -2023,6 +2023,31 @@ textarea:focus {
     }
 }
 
+/* Hamburger menu adjustments for tablets and mobile */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex !important;
+    }
+    
+    .nav-menu {
+        display: none !important;
+    }
+    
+    .nav-menu.show {
+        display: flex !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none !important;
+    }
+    
+    .nav-menu {
+        display: flex !important;
+    }
+}
+
 @media (max-width: 480px) {
     .payment-icon {
         height: 24px;
