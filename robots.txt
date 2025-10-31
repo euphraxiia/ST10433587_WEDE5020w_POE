@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://euphraxiia.github.io/ST10433587_WEDE5020w_POE/sitemap.xml

@@ -1,0 +1,27 @@
+{
+  "prices": { "small": 60, "medium": 85, "large": 110, "family": 135 },
+  "categories": {
+    "meat": [
+      { "id": "carnivore-feast", "name": "Carnivore's Feast", "desc": "Juicy beef strips with pepperoni, bacon, and ham on a rich tomato base with mozzarella cheese, olives and bell peppers", "img": "carnivore-feast.jpg" },
+      { "id": "meat-supreme", "name": "Meat Supreme", "desc": "Pepperoni, Italian sausage, mushrooms, and olives with tomato base and mozzarella cheese", "img": "meat-supreme.jpg" },
+      { "id": "pepperoni-special", "name": "Pepperoni Special", "desc": "Rich tomato base topped with creamy mozzarella and slices of premium pepperoni", "img": "pepperoni-special.jpg" },
+      { "id": "steakhouse-classic", "name": "Steakhouse Classic", "desc": "Juicy beef strips, fresh mushrooms, and onions on a rich tomato and mozzarella base", "img": "steakhouse-classic.jpg" },
+      { "id": "salami-fiesta", "name": "Salami Fiesta", "desc": "Bold salami, ham, mozzarella cheese, bell pepper, and fresh tomatoes for a punch of flavor", "img": "salami-fiesta.jpg" },
+      { "id": "meat-lovers-supreme", "name": "Meat Lover's Supreme", "desc": "White sauce topped with sausage, pepperoni, mushrooms, bell peppers, olives, and corn for a true feast", "img": "meat-lovers-supreme.jpg" }
+    ],
+    "chicken": [
+      { "id": "smokey-chicken", "name": "Smokey Chicken Delight", "desc": "Succulent chicken with spicy chilli sauce, topped with olives, tomatoes, mozzarella cheese, and a drizzle of ranch sauce", "img": "smokey-chicken.jpg" },
+      { "id": "chicken-mushroom", "name": "Chicken & Mushroom", "desc": "Grilled chicken breast with fresh mushrooms, herbs, and mozzarella on a white sauce base", "img": "chicken-mushroom.jpg" },
+      { "id": "creamy-chicken-garden", "name": "Creamy Chicken Garden", "desc": "Succulent chicken, mozzarella, olives, bell peppers, mushrooms, and tomatoes on a velvety white sauce base", "img": "creamy-chicken-garden.jpg" },
+      { "id": "rustic-chicken-basil", "name": "Rustic Chicken & Basil", "desc": "Tomato base with tender chicken, mushrooms, sweet corn, fresh basil, and mozzarella", "img": "rustic-chicken-basil.jpg" },
+      { "id": "bbq-chicken-supreme", "name": "BBQ Chicken Supreme", "desc": "Smoky BBQ sauce loaded with chicken, tomatoes, bell peppers, olives, onions, and gooey mozzarella", "img": "bbq-chicken-supreme.jpg" }
+    ],
+    "vegetarian": [
+      { "id": "classic-margherita", "name": "Classic Margherita", "desc": "A combination of fresh tomato base, creamy mozzarella, and fragrant basil leaves", "img": "classic-margherita.jpg" },
+      { "id": "mediterranean", "name": "Mediterranean Delight", "desc": "Feta cheese, olives, sun-dried tomatoes, spinach, and herbs with a white sauce base", "img": "mediterranean.jpg" },
+      { "id": "veggie-supreme", "name": "Veggie Supreme", "desc": "Broccoli and olives on a tomato base with mozzarella cheese balls", "img": "veggie-supreme.jpg" },
+      { "id": "veggie-harvest", "name": "Veggie Harvest", "desc": "Tomato base with grilled aubergine, bell peppers, rocket, and balsamic glaze", "img": "veggie-harvest.jpg" },
+      { "id": "avocado-bliss", "name": "Avocado Bliss", "desc": "Creamy white sauce with mozzarella, ripe avocado, juicy tomatoes, and briny olives", "img": "avocado-bliss.jpg" }
+    ]
+  }
+}

@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Leaflet Map library -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
      
 </head>
 <body>
@@ -53,12 +56,22 @@
                             <label for="email">Email Address:</label>
                             <input type="email" id="email" name="email" required>
                         </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="082 123 4567" required>
+                        </div>
                         
                         <div class="form-group">
                             <label for="subject">Subject:</label>
                             <select id="subject" name="subject" required>
                                 <option value="">Please select a subject</option>
-                                <option value="general">General Inquiry</option>
+                                <option value="general">General Enquiry</option>
+                                <option value="availability">Pizza Availability</option>
+                                <option value="prices">Prices & Deals</option>
+                                <option value="delivery">Delivery</option>
+                                <option value="catering">Catering & Events</option>
+                                <option value="special-orders">Special Orders</option>
                                 <option value="complaint">Complaint</option>
                                 <option value="compliment">Compliment</option>
                                 <option value="other">Other</option>
@@ -87,16 +100,7 @@
                     <div class="location-map">
                         <h2>Find Us</h2>
                         <div class="map-container">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.2742739945937!2d27.9041!3d-26.4793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a1c5c5c5c5c5%3A0x5c5c5c5c5c5c5c5c!2s19%20Loch%20Street%2C%20Meyerton!5e0!3m2!1sen!2sza!4v1627834567890!5m2!1sen!2sza"
-                                width="100%" 
-                                height="300" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade"
-                                title="Campanella Pizza Location">
-                            </iframe>
+                            <div id="leaflet-map" style="inline-size:100%; block-size:300px; border-radius:8px; overflow:hidden;"></div>
                         </div>
                     </div>
                     
@@ -106,6 +110,12 @@
                         <p>19 Loch Street<br>
                         Meyerton, Gauteng<br>
                         South Africa</p>
+                        <div class="opening-hours">
+                            <h3>Opening Hours</h3>
+                            <p>Mon – Thu: 10:00 – 21:00</p>
+                            <p>Fri – Sat: 10:00 – 22:00</p>
+                            <p>Sun: 11:00 – 20:00</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,9 +123,31 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Campanella Pizza. All rights reserved.</p>
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-bottom">
+            <p>&copy; 2025 Campanella Pizza. All Rights Reserved.</p>
+            
+            <!-- Payment methods -->
+            <div class="payment-methods-footer">
+                <span class="payment-label">We Accept:</span>
+                <div class="payment-icons">
+                    <svg class="payment-icon" role="img" aria-label="Visa" title="Visa" viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="64" height="40" rx="6" fill="#1A1F71"/>
+                        <text x="50%" y="58%" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="18" fill="#FFFFFF">VISA</text>
+                    </svg>
+                    <svg class="payment-icon" role="img" aria-label="Mastercard" title="Mastercard" viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="64" height="40" rx="6" fill="#000000"/>
+                        <g transform="translate(14,8)">
+                            <circle cx="12" cy="12" r="12" fill="#EB001B"/>
+                            <circle cx="28" cy="12" r="12" fill="#F79E1B"/>
+                            <path d="M20 0a12 12 0 0 0 0 24a12 12 0 0 0 0-24z" fill="#FF5F00"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
     </footer>
- 
+
+    <script src="js/script.js"></script>
 </body>
 </html>
