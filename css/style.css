@@ -1634,7 +1634,6 @@ footer p {
     max-width: 1200px !important;
     margin: 0 auto !important;
     padding: 0 1rem !important;
-    background: red !important; /* temporary debug color */
 }
 
 .monique-review,
@@ -1645,7 +1644,6 @@ footer p {
     border-radius: 12px !important;
     box-shadow: 0 6px 20px rgba(0,0,0,0.1) !important;
     text-align: center !important;
-    border: 3px solid blue !important; /* temporary debug border */
 }
 
 .monique-review h3,

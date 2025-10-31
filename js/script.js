@@ -893,7 +893,7 @@ const utils = {
             const badge = document.createElement('div');
             badge.className = 'price-badge';
             badge.textContent = `From ${utils.formatCurrency(pizzaData.prices.small)}`;
-            badge.style.cssText = 'display:inline-block; margin-top:6px; color:#C62828; font-weight:800;';
+            badge.style.cssText = 'display:inline-block; margin-top: 6px; color:#C62828; font-weight:800;';
             titleEl.after(badge);
           }
         }
@@ -1040,7 +1040,7 @@ const utils = {
 
           const controls = document.createElement('div');
           controls.className = 'drink-controls';
-          controls.style.cssText = 'margin-top: 12px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center;';
+          controls.style.cssText = 'margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center;';
           controls.innerHTML = `
             <select class="drink-size" style="padding:10px; border:2px solid #D0D0D0; border-radius:8px; font-size:14px; font-family:'Open Sans', sans-serif; cursor:pointer;">
               <option value="small">Small - ${utils.formatCurrency(prices.small)}</option>
@@ -1102,7 +1102,7 @@ const utils = {
 
         const controls = document.createElement('div');
         controls.className = 'extras-controls';
-        controls.style.cssText = 'margin-top: 12px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center;';
+        controls.style.cssText = 'margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center;';
         controls.innerHTML = `
           <div class="qty-wrap" style="display:flex; align-items:center; gap:6px;">
             <label style="font-size:14px; color:#555;">Qty</label>
@@ -1660,7 +1660,7 @@ const utils = {
             <h2 style="margin:0 0 10px 0; color:#263238; font-family:'Playfair Display', serif;">Message Sent</h2>
             <p style="color:#555;">Thanks, <strong>${data.name}</strong>. We have received your message.</p>
             <pre style="white-space:pre-wrap; background:#F9F9F9; padding:12px; border-radius:8px; border:1px solid #F0F0F0; color:#333;">${body}</pre>
-            <div style="text-align:right; margin-top:12px;">
+            <div style="text-align: right; margin-top: 12px;">
               <button class="close-confirm" style="padding:10px 16px; background:linear-gradient(135deg,#C62828,#B71C1C); color:#FFF8E1; border:none; border-radius:8px; font-weight:700; cursor:pointer;">Close</button>
             </div>
           </div>`;
@@ -1848,7 +1848,7 @@ const utils = {
       if (!footer || footer.querySelector('.social-links')) return;
       const wrap = document.createElement('div');
       wrap.className = 'social-links';
-      wrap.style.cssText = 'margin-top:10px; display:flex; gap:12px; justify-content:center; align-items:center;';
+      wrap.style.cssText = 'margin-top: 10px; display: flex; gap: 12px; justify-content: center; align-items: center;';
       wrap.innerHTML = `
         <a href=\"https://www.facebook.com/campanellapizza/\" target=\"_blank\" rel=\"noopener\" aria-label=\"Facebook\" title=\"Facebook\" style=\"display:inline-flex;align-items:center;\">
           <svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
