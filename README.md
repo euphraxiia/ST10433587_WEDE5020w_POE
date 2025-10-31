@@ -182,7 +182,7 @@ This final phase focused on implementing advanced JavaScript functionality, inte
 - Added category accordions for collapsible menu sections
 
 ### Week 12: SEO, Accessibility, and Final Polish
-**Dates**: 10 - 14 October 2025
+**Dates**: 10 - 19 November 2025
 - Implemented SEO enhancements (meta tags, canonical links, keyword injection)
 - Added lazy loading for images to improve page load performance
 - Created 404 error page for better user experience
@@ -195,7 +195,7 @@ This final phase focused on implementing advanced JavaScript functionality, inte
 - Implemented ARIA labels and live regions throughout the site
 - Replaced payment icons with custom SVG versions (Visa, Mastercard)
 - Removed debug styles and polished final code
-- **Part 3 Submission**: 14 October 2025
+- **Part 3 Submission**: 19 November 2025
 
 ### Key Achievements in Phase 3:
 - **Interactive Shopping Cart**: Fully functional cart with persistence, quantity management, and checkout flow
